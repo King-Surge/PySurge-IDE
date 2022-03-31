@@ -14,9 +14,7 @@ This repository will guide you on how to make your own Integrated Development En
 
 5. For this IDE to work you must have Python Installed on your device
 
-6. Not designed for heavy projects - being worked on
-
-7. Copy and paste from main file to Python Surge - IDE then save file _**(Outside Project Directory)**_ and run as a test this should create a duplicate of the ide proving it works
+6. Copy and paste from main file to Python Surge - IDE then save file _**(Outside Project Directory)**_ and run as a test this should create a duplicate of the ide proving it works
 
 _**Please Note:**_
 
