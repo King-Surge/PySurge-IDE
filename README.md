@@ -25,4 +25,6 @@ until then please enjoy light theme
 
 Enjoy Python Surge!!
 
+_**For More Information:**_ Contact Me On Discord KingSurge#9182
+
 ~KingSurge
