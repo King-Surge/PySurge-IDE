@@ -192,9 +192,15 @@ editor.bind("<<Modified>>", change_word)
 def light():
     editor.config(fg="black", bg="white")
     output_window.config(fg="black", bg="white")
+    
+# create a light theme
+def dark():
+    editor.config(fg="white", bg="black")
+    output_window.config(fg="white", bg="black")
 
 # create a command to change themes
 theme_menu.add_command(label="light", command=light)
+theme_menu.add_command(label="dark", command=dark)
 
 # create a terminal/output window
 output_window = ScrolledText(window, font=("corbel 12 bold"), wrap=None, height=9)
