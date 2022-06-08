@@ -50,7 +50,7 @@ editor.pack()
 def open_file(event=None):
     global code, file_path
 
-    open_path = askopenfilename(filetypes=[("Python File", "*.py"), ("HTML", "*.html"), ("JavaScript", "*.js*), ("Cascading Style Sheet", "*.css")])
+    open_path = askopenfilename(filetypes=[("Python File", "*.py"), ("HTML", "*.html"), ("JavaScript", "*.js"), ("CSS", "*.css")])
     file_path = open_path
     with open(open_path, "r") as file:
         code = file.read()
@@ -67,7 +67,7 @@ def save_file(event=None):
     global code, file_path
     if file_path == '':
         save_path = asksaveasfilename(defaultextension="",
-                                      filetypes=[("Python File", "*.py"), ("HTML", "*.html"), ("JavaScript", "*.js"), ("CSS", "*.js*) ])
+                                      filetypes=[("Python File", "*.py"), ("HTML", "*.html"), ("JavaScript", "*.js"), ("CSS", "*.css") ])
         file_path = save_path
     else:
         save_path = file_path
@@ -84,7 +84,7 @@ window.bind("<Control-s>", save_file)
 def save_as(event=None):
     global code, file_path
     save_path = asksaveasfilename(defaultextension="",
-                                  filetypes=[("Python File", "*.py"), ("HTML", "*.html"), ("JavaScript", "*.js*),("Cascading Style Sheet", "*.css")])
+                                  filetypes=[("Python File", "*.py"), ("HTML", "*.html"), ("JavaScript", "*.js"),("CSS", "*.css")])
     file_path = save_path
     with open(save_path, "w") as file:
         code = editor.get(1.0, END)
