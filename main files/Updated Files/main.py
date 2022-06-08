@@ -67,7 +67,7 @@ def save_file(event=None):
     global code, file_path
     if file_path == '':
         save_path = asksaveasfilename(defaultextension="",
-                                      filetypes=[("Python File", "*.py"), ("HTML", "*.html"), ("JavaScript", "*.js"), ("CSS", "*.css") ])
+                                      filetypes=[("Python File", "*.py"), ("HTML", "*.html"), ("JavaScript", "*.js"),("CSS", "*.css")])
         file_path = save_path
     else:
         save_path = file_path
@@ -96,6 +96,9 @@ window.bind("<Control-S>", save_as)
 
 # create a function that alows you to run file
 def run(event=None):
+    
+    
+        
     cmd = f"python {file_path}"
     process = subprocess.Popen(cmd,
                                stdout=subprocess.PIPE,
@@ -132,6 +135,13 @@ def runc(event=None):
 # create shortcut to run
 window.bind("<F5>", run)
 
+def about():
+  wind = Tk()
+  wind.title("About")
+  wind.geometry("500x500")
+
+  j = Label(wind, text="To Be Added")
+  j.pack()
 
 # create a function that allows you to close the file/ IDE
 def close(event=None):
@@ -160,6 +170,7 @@ edit_menu = Menu(menu, tearoff=0)
 run_menu = Menu(menu, tearoff=0)
 view_menu = Menu(menu, tearoff=0)
 theme_menu = Menu(menu, tearoff=0)
+about_menu = Menu(menu, tearoff=0)
 
 # name each menu
 menu.add_cascade(label="File", menu=file_menu)
@@ -167,6 +178,7 @@ menu.add_cascade(label="Edit", menu=edit_menu)
 menu.add_cascade(label="Run", menu=run_menu)
 menu.add_cascade(label="View", menu=view_menu)
 menu.add_cascade(label="Theme", menu=theme_menu)
+menu.add_cascade(label="About", menu=about_menu)
 
 # create shortcut and names for commands
 file_menu.add_command(label="Open", accelerator="Ctrl+O", command=open_file)
@@ -186,10 +198,13 @@ edit_menu.add_command(label="Paste", accelerator="Ctrl+V", command=paste_text)
 run_menu.add_command(label="Run: Python", accelerator="F5", command=run)
 run_menu.add_command(label="Run: HTML", accelerator="F6", command=runb)
 run_menu.add_command(label="Run: JavaScript", accelerator="F7", command=runc)
+
+about_menu.add_command(label="About", accelerator="A", command=about)
 																						   
 # create a command that allows you to show or hide the status bar
 show_status_bar = BooleanVar()
 show_status_bar.set(True)
+
 
 
 def hide_statusbar():
@@ -259,4 +274,3 @@ output_window = ScrolledText(window,
                              height=9)
 output_window.pack(fill=BOTH, expand=1)
 window.mainloop()
-
