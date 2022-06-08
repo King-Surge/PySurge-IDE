@@ -67,7 +67,7 @@ def save_file(event=None):
     global code, file_path
     if file_path == '':
         save_path = asksaveasfilename(defaultextension="",
-                                      filetypes=[("Python File", "*.py"), ("HTML", "*.html"), ("JavaScript", "*.js*),("Cascading Style Sheet", "*.css")])
+                                      filetypes=[("Python File", "*.py"), ("HTML", "*.html"), ("JavaScript", "*.js"), ("CSS", "*.js*) ])
         file_path = save_path
     else:
         save_path = file_path
