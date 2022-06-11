@@ -2,6 +2,11 @@ Hello There Im KingSurge.
 
 This repository will guide you on how to make your own Integrated Development Environment (IDE).
 
+
+**files**
+
+Within the Main files folder there are 2 folders: ***Original Files and updated files***. In the updated folder you may find the updated versions of the IDE while in the original forlder you will find the official beginning file
+
 **Important Things To Note And Do:**
 
 1. Each section of the code has comments to make it easier to understand.
